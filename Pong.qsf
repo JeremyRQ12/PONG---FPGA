@@ -1,0 +1,105 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+# Date created = 13:59:08  May 21, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Pong_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C16F484C6
+set_global_assignment -name TOP_LEVEL_ENTITY Project10_Pong_Top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:59:08  MAY 21, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name VHDL_FILE VGA_Sync_Pulses.vhd
+set_global_assignment -name VHDL_FILE VGA_Sync_Porch.vhd
+set_global_assignment -name VHDL_FILE Sync_To_Count.vhd
+set_global_assignment -name VHDL_FILE Project10_Pong_Top.vhd
+set_global_assignment -name VHDL_FILE Pong_Top.vhd
+set_global_assignment -name VHDL_FILE Pong_Pkg.vhd
+set_global_assignment -name VHDL_FILE Pong_Paddle_Ctrl.vhd
+set_global_assignment -name VHDL_FILE Pong_Ball_Ctrl.vhd
+set_global_assignment -name VHDL_FILE Debounce_Switch.vhd
+set_global_assignment -name VHDL_FILE clkdiv.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_G21 -to clock
+set_location_assignment PIN_H5 -to i_start
+set_location_assignment PIN_Y17 -to i_Switch_1
+set_location_assignment PIN_W17 -to i_Switch_2
+set_location_assignment PIN_AA17 -to i_Switch_3
+set_location_assignment PIN_AB17 -to i_Switch_4
+set_location_assignment PIN_K18 -to o_VGA_Blu_3
+set_location_assignment PIN_K22 -to o_VGA_Blu_0
+set_location_assignment PIN_K21 -to o_VGA_Blu_1
+set_location_assignment PIN_J22 -to o_VGA_Blu_2
+set_location_assignment PIN_H22 -to o_VGA_Grn_0
+set_location_assignment PIN_J17 -to o_VGA_Grn_1
+set_location_assignment PIN_K17 -to o_VGA_Grn_2
+set_location_assignment PIN_J21 -to o_VGA_Grn_3
+set_location_assignment PIN_L21 -to o_VGA_HSync
+set_location_assignment PIN_H19 -to o_VGA_Red_0
+set_location_assignment PIN_H17 -to o_VGA_Red_1
+set_location_assignment PIN_H20 -to o_VGA_Red_2
+set_location_assignment PIN_H21 -to o_VGA_Red_3
+set_location_assignment PIN_L22 -to o_VGA_VSync
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name VHDL_FILE Convertidor.vhd
+set_location_assignment PIN_F13 -to SSeg2[6]
+set_location_assignment PIN_F12 -to SSeg2[5]
+set_location_assignment PIN_G12 -to SSeg2[4]
+set_location_assignment PIN_H13 -to SSeg2[3]
+set_location_assignment PIN_H12 -to SSeg2[2]
+set_location_assignment PIN_F11 -to SSeg2[1]
+set_location_assignment PIN_E11 -to SSeg2[0]
+set_location_assignment PIN_F14 -to SSeg1[6]
+set_location_assignment PIN_B17 -to SSeg1[5]
+set_location_assignment PIN_A17 -to SSeg1[4]
+set_location_assignment PIN_E15 -to SSeg1[3]
+set_location_assignment PIN_B16 -to SSeg1[2]
+set_location_assignment PIN_A16 -to SSeg1[1]
+set_location_assignment PIN_D15 -to SSeg1[0]
+set_location_assignment PIN_J6 -to Rst
+set_location_assignment PIN_H6 -to st
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
